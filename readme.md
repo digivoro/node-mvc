@@ -13,3 +13,7 @@ Se implementa un servidor conectado a una base de datos no relacional.
 
 - Agregar estilo a formulario de creacion de usuarios
 - Manejar ruta al enviar formulario de reserva de horas
+- Implementar resto del CRUD
+-- Read
+-- Update
+-- Delete
