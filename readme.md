@@ -2,7 +2,8 @@
 
 ## Front
 
-Formulario simple para registro de usuario y formulario de reserva de horas medicas con Materialize
+Formulario simple para registro de usuario y formulario de reserva de horas medicas con Materialize. 
+Se maneja validacion de campos de formulario de reserva
 
 ## Back
 
