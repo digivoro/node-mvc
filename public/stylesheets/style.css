@@ -1,8 +1,25 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  font-family: "Roboto";
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.navigation {
+  padding: 0 3rem;
+}
+
+.navigation__list {
+  display: flex;
+  justify-items: end;
+}
+
+.navigation__item {
+}
+
+.footer {
+  background: darkslategrey;
+  padding: 3rem;
 }

@@ -1,0 +1,158 @@
+<% include partials/head %>
+<% include partials/header %>
+
+  <div class="container row">
+    <h3 class="center"><%= title %></h3>
+    <section class="section col s10 offset-s1 l8 offset-l2 z-depth-2">
+      <div class="row">
+        <!-- Form prellenado -->
+        <form action="/reservations" method="post" class="col s12">
+          <div class="row">
+            <h5 class="col s12 l12 center">Paciente</h5>
+
+            <div class="input-field col s12 l12">
+              <i class="material-icons prefix teal-text">card_membership</i>
+              <input name="rut" id="rut" type="text" class="validate" value="16667464-6" />
+              <label for="rut">Rut</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">person</i>
+              <input name="name" id="nombres" type="text" class="validate" value="Felipe Daniel" />
+              <label for="nombres">Nombres</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">group</i>
+              <input name="lastname" id="apellidos" type="text" class="validate" value="Castro Richter" />
+              <label for="apellidos">Apellidos</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">cake</i>
+              <input name="age" id="edad" type="text" class="validate" value="32" />
+              <label for="edad">Edad</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">email</i>
+              <input name="email" id="email" type="email" class="validate" value="nkardia@gmail.com" />
+              <label for="email">Email</label>
+            </div>
+            <h5 class="col s12 center">Atención</h5>
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix teal-text">local_pharmacy</i>
+              <select name="speciality" id="especialidad">
+                <option value="traumatología" selected>Traumatología</option>
+                <option value="radiología">Radiología</option>
+                <option value="dental">Dental</option>
+              </select>
+              <label for="especialidad">Especialidad</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">today</i>
+              <input name="reservation_date" id="fecha" type="text" class="validate" value="15-11-2020" />
+              <label for="fecha">Fecha Reserva</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">watch_later</i>
+              <select name="reservation_time" id="hora">
+                <option value="09:00" selected>09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+              </select>
+              <label>Especialidad</label>
+            </div>
+          </div>
+          <div class="row center">
+            <button id="btn-reservar" class="btn disabled waves-effect waves-light z-depth-2 hoverable">Reservar <i class="material-icons right">send</i></button>
+          </div>
+        </form>
+
+        <!-- Form por llenar -->
+        <!-- <form class="col s12">
+          <div class="row">
+            <h5 class="col s12 l12 center">Paciente</h5>
+            <div class="input-field col s12 l12">
+              <i class="material-icons prefix teal-text">card_membership</i>
+              <input id="rut" type="text" class="validate" />
+              <label for="rut">Rut</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">person</i>
+              <input id="nombres" type="text" class="validate" />
+              <label for="nombres">Nombres</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">group</i>
+              <input id="apellidos" type="text" class="validate" />
+              <label for="apellidos">Apellidos</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">cake</i>
+              <input id="edad" type="text" class="validate" />
+              <label for="edad">Edad</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">email</i>
+              <input id="email" type="email" class="validate" />
+              <label for="email">Email</label>
+            </div>
+
+            <h5 class="col s12 center">Atención</h5>
+            <div class="input-field col s12">
+              <i class="material-icons prefix teal-text">local_pharmacy</i>
+              <select id="especialidad">
+                <option value="traumatología" selected>Traumatología</option>
+                <option value="radiología">Radiología</option>
+                <option value="dental">Dental</option>
+              </select>
+              <label for="especialidad">Especialidad</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">today</i>
+              <input id="fecha" type="text" class="validate" />
+              <label for="fecha">Fecha Reserva</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix teal-text">watch_later</i>
+              <select id="hora">
+                <option value="09:00" selected>09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+              </select>
+              <label>Especialidad</label>
+            </div>
+          </div>
+        </form> -->
+
+
+      </div>
+    </section>
+  </div>
+  <section class="section center"></section>
+  <div class="container center">
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h4>Reserva de hora</h4>
+        <p id="texto-modal">Texto</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+      </div>
+    </div>
+  </div>
+
+<% include partials/footer %>

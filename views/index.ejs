@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include partials/head %>
+<% include partials/header %>
+  
+  <h1><%= title %></h1>
+
+  <form action="/users" method="post">
+    <input type="text" name="name" placeholder="Nombre" />
+    <input type="text" name="lastname" placeholder="Apellidos" />
+    <input type="email" name="email" placeholder="E-Mail" />
+    <input type="password" name="password" placeholder="Contraseña" />
+    <button type="submit">Crear usuario</button>
+  </form>
+
+<% include partials/footer %>
