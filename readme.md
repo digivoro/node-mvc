@@ -6,7 +6,8 @@ Formulario simple para registro de usuario y formulario de reserva de horas medi
 
 ## Back
 
-Se implementa un servidor conectado a una base de datos no relacional
+Se implementa un servidor conectado a una base de datos no relacional.
+- CRUD: Solo Create.
 
 ## Pendientes
 
