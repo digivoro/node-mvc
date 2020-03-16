@@ -16,5 +16,12 @@ exports.all_users = function(req, res, next) {
   User.find({}, function(err, users) {
     if (err) return res.json({ error: err });
     res.json(users);
-  });
+  })
+    .collation({
+      locale: "en",
+      strength: 2
+    })
+    .sort({
+      name: 1
+    });
 };

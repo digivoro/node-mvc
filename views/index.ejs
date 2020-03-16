@@ -3,13 +3,16 @@
   
   <div class="container row">
     <h1><%= title %></h1>
-    <form action="/users" method="post">
-      <input type="text" name="name" placeholder="Nombre" />
-      <input type="text" name="lastname" placeholder="Apellidos" />
-      <input type="email" name="email" placeholder="E-Mail" />
-      <input type="password" name="password" placeholder="Contraseña" />
-      <button type="submit">Crear usuario</button>
-    </form>
+    
+    <div class="formulario z-depth-2">
+      <form id="user-form" action="/users" method="post">
+        <input id="user-name" type="text" name="name" placeholder="Nombre" />
+        <input id="user-lastname" type="text" name="lastname" placeholder="Apellidos" />
+        <input id="user-email" type="email" name="email" placeholder="E-Mail" />
+        <input id="user-password" type="password" name="password" placeholder="Contraseña" />
+        <button class="btn waves-effect waves-light z-depth-2 hoverable" type="submit">Crear usuario</button>
+      </form>
+    </div>
   
     <table id="users-table">
       <tr>

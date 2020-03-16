@@ -7,6 +7,10 @@ a {
   color: #00b7ff;
 }
 
+#users-table {
+  margin-bottom: 3rem;
+}
+
 .navigation {
   padding: 0 3rem;
 }
@@ -16,10 +20,12 @@ a {
   justify-items: end;
 }
 
-.navigation__item {
-}
-
 .footer {
   background: darkslategrey;
+  padding: 2rem;
+}
+
+.formulario {
   padding: 3rem;
+  margin-bottom: 3rem;
 }
